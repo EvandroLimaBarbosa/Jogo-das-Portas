@@ -12,7 +12,7 @@ export default function Porta(props: PortaProps) {
   const selecionada = porta.selecionada && !porta.aberta ? styles.selecionada : "";
 
   const alternarSelecao = () => props.onChange(porta.alternarSelecao());
-  const abrir = e => {
+  const abrir = (e: { stopPropagation: () => void; }) => {
     e.stopPropagation()
     props.onChange(porta.abrir())
   };
@@ -33,7 +33,7 @@ export default function Porta(props: PortaProps) {
         {porta.fechada ?
           renderizarPorta() :
           porta.temPresente ?
-            <Presente></Presente> : false}
+            <Presente/> : false}
       </div>
       <div className={styles.chao}></div>
     </div>
