@@ -18,8 +18,6 @@ export default function jogo() {
     setPortas(criarPortas(portas, temPresente));
   }, [router?.query]);
 
-
-
   function renderizarPortas() {
     return portas.map(porta => {
         return <Porta key={porta.numero} value={porta}
@@ -33,7 +31,7 @@ export default function jogo() {
       </div>
       <div className={styles.botoes}>
         <Link href={"/"}>
-          <button>Reiniciar Jogo</button>
+          <button type="button">Reiniciar Jogo</button>
         </Link>
       </div>
     </div>
