@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.formulario {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin: 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+.h1 {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
