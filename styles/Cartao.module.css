@@ -5,3 +5,15 @@
   color: #fff;
   font-size: 2rem;
 }
+
+.red {
+  background-color: #c0392c;
+}
+
+.green {
+  background-color: #28a085;
+}
+
+.white {
+  background-color: #fff;
+}
