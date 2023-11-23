@@ -7,7 +7,7 @@ import Link from "next/link"
 import { useRouter } from "next/router";
 import PortaModel from "../../../model/porta";
 
-export default function jogo() {
+export default function Jogo() {
   const router = useRouter();
 
   const [valido, setValido] = useState(false);
@@ -21,7 +21,7 @@ export default function jogo() {
     const temPresenteValido = temPresente >= 1 && temPresente <= portas
 
     setValido(qtdePortasValidas && temPresenteValido)
-  }, [portas]);
+  }, [portas, router.query.temPresente, router.query.portas]);
 
   useEffect(() => {
     const portas = router.query.portas ? +router.query.portas : 0;
